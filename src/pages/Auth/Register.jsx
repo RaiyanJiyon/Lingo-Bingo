@@ -1,10 +1,37 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { authContext } from "../../contexts/AuthProvider";
 
 const Register = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+
+    const {user, createUser} = useContext(authContext);
+    console.log(user);
+
+    const handleRegisterForm = (e) => {
+        e.preventDefault();
+
+        const form = e.currentTarget;
+        const formData = new FormData(form);
+
+        const name = formData.get('name');
+        const photoURL = formData.get('photoURL');
+        const email = formData.get('email');
+        const password = formData.get('password');
+        const confirmPassword = formData.get('confirm-password');
+
+        console.log(name, photoURL, email, password, confirmPassword);
+
+        createUser(email, password)
+        .then(userCredential => {
+            console.log(userCredential.user);
+        })
+        .catch(error => {
+            console.log(error.message);
+        });
+    }
 
     return (
         <section className="bg-gray-50">
@@ -18,7 +45,7 @@ const Register = () => {
                         <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">
                             Create an account
                         </h1>
-                        <form className="space-y-4 md:space-y-6" action="#">
+                        <form onSubmit={handleRegisterForm} className="space-y-4 md:space-y-6" action="#">
                             <div>
                                 <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900">Your name</label>
                                 <input type="text" name="name" id="name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="name" required />
