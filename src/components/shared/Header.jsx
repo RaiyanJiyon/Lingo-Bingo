@@ -28,7 +28,7 @@ const Header = () => {
                         <NavLink to={"/about-us"} className={({ isActive }) => isActive ? 'text-black font-bold underline' : 'text-black font-normal'}>About Us</NavLink>
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">Lingo Bingo</a>
+                <Link to={"/"} className="btn btn-ghost text-xl">Lingo Bingo</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 gap-4">
