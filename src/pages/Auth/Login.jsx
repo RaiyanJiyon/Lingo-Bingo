@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Login = () => {
     return (
         <section className="bg-gray-50">
@@ -29,11 +31,11 @@ const Login = () => {
                                         <label htmlFor="remember" className="text-gray-500">Remember me</label>
                                     </div>
                                 </div>
-                                <a href="#" className="text-sm font-medium text-primary-600 hover:underline">Forgot password?</a>
+                                <Link to={"/auth/forgot-password"} className="text-sm font-medium text-[#1e0e5c] hover:underline">Forgot password?</Link>
                             </div>
-                            <button type="submit" className="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Sign in</button>
+                            <button type="submit" className="w-full bg-[#1e0e5c] text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-bold rounded-lg text-sm px-5 py-2.5 text-center">Sign in</button>
                             <p className="text-sm font-light text-gray-500">
-                                Don’t have an account yet? <a href="#" className="font-medium text-primary-600 hover:underline">Sign up</a>
+                                Don’t have an account yet? <Link to={"/auth/register"} className="font-medium text-[#1e0e5c] hover:underline">Sign up</Link>
                             </p>
                         </form>
                     </div>
