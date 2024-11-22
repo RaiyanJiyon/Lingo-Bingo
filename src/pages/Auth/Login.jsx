@@ -1,6 +1,7 @@
 import { useContext, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { authContext } from "../../contexts/AuthProvider";
+import { FaGithub, FaGoogle } from "react-icons/fa";
 
 const Login = () => {
     useEffect(() => {
@@ -9,7 +10,18 @@ const Login = () => {
 
     const navigate = useNavigate();
 
-    const { loginUser } = useContext(authContext);
+    const { createUserWithGoogle, loginUser } = useContext(authContext);
+
+    const handleLoginWithGoogle = () => {
+        createUserWithGoogle()
+            .then(result => {
+                console.log(result.user);
+                navigate("/");
+            })
+            .catch(error => {
+                console.error(error.message);
+            });
+    };
 
     const handleLoginForm = (e) => {
         e.preventDefault();
@@ -46,6 +58,16 @@ const Login = () => {
                             Sign in to your account
                         </h1>
                         <form onSubmit={handleLoginForm} className="space-y-4 md:space-y-6" action="#">
+                            <div className="flex flex-col md:flex-row items-center justify-between gap-2">
+                                <div onClick={handleLoginWithGoogle} className="flex items-center md:justify-center gap-2 w-full border border-gray-300 px-4 py-2 rounded-lg cursor-pointer">
+                                    <FaGoogle className="text-xl" />
+                                    <span className="text-sm font-medium">Log in with Google</span>
+                                </div>
+                                <div className="flex items-center md:justify-center gap-2 w-full border border-gray-300 px-4 py-2 rounded-lg cursor-pointer">
+                                    <FaGithub className="text-xl" />
+                                    <span className="text-sm font-medium">Log in with Github</span>
+                                </div>
+                            </div>
                             <div>
                                 <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900">Your email</label>
                                 <input type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="name@company.com" required />

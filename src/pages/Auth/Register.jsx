@@ -61,11 +61,11 @@ const Register = () => {
                             <div className="flex flex-col md:flex-row items-center justify-between gap-2">
                                 <div onClick={handleGoogleSignUP} className="flex items-center md:justify-center gap-2 w-full border border-gray-300 px-4 py-2 rounded-lg cursor-pointer">
                                     <FaGoogle className="text-xl" />
-                                    <span className="text-sm font-medium">Log in with Google</span>
+                                    <span className="text-xs font-medium">Sign up with Google</span>
                                 </div>
                                 <div className="flex items-center md:justify-center gap-2 w-full border border-gray-300 px-4 py-2 rounded-lg cursor-pointer">
                                     <FaGithub className="text-xl" />
-                                    <span className="text-sm font-medium">Log in with Github</span>
+                                    <span className="text-xs font-medium">Sign up with Github</span>
                                 </div>
                             </div>
                             <div>
