@@ -12,6 +12,7 @@ import Tutorials from '../pages/Tutorials';
 import Profile from '../pages/Profile/Profile';
 import UpdateProfile from '../pages/Profile/UpdateProfile';
 import AboutUs from '../pages/AboutUs';
+import PrivateRoute from './PrivateRoute';
 
 const router = createBrowserRouter([
     {
@@ -70,8 +71,9 @@ const router = createBrowserRouter([
                     {
                         path: '',
                         element: (
-                            
+                            <PrivateRoute>
                                 <Profile />
+                            </PrivateRoute>
                             
                         )
                     },
