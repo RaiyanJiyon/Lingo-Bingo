@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { authContext } from "../../contexts/AuthProvider";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 
@@ -8,6 +8,7 @@ const Login = () => {
         window.scrollTo(0, 0);
     }, []);
 
+    const location = useLocation();
     const navigate = useNavigate();
 
     const { createUserWithGoogle, loginUser } = useContext(authContext);
@@ -45,9 +46,18 @@ const Login = () => {
             });
     };
 
+    const navigateToForgetPassword = () => {
+        const emailInput = document.getElementById('email');
+        navigate("/auth/forgot-password", {
+            state: {
+                email: emailInput.value,
+            }
+        });
+    }
+
     return (
-        <section className="bg-gray-50">
-            <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+        <section className="bg-gray-50 mt-6">
+            <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto lg:py-0">
                 <Link to={"/"} className="flex items-center mb-6 text-2xl font-semibold text-gray-900">
                     <img className="w-8 h-8 mr-2" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg" alt="logo" />
                     Lingo Bingo
@@ -85,7 +95,7 @@ const Login = () => {
                                         <label htmlFor="remember" className="text-gray-500">Remember me</label>
                                     </div>
                                 </div>
-                                <Link to={"/auth/forgot-password"} className="text-sm font-medium text-[#1e0e5c] hover:underline">Forgot password?</Link>
+                                <span onClick={navigateToForgetPassword} className="text-sm font-medium text-[#1e0e5c] hover:underline">Forgot password?</span>
                             </div>
                             <button type="submit" className="w-full bg-[#1e0e5c] text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-bold rounded-lg text-sm px-5 py-2.5 text-center">Sign in</button>
                             <p className="text-sm font-light text-gray-500">
