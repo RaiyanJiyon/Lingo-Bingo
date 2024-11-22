@@ -9,13 +9,13 @@ const Header = () => {
 
     const handleLogoutUser = () => {
         logoutUser()
-        .then(() => {
-            console.log("Log out successfully");
-            navigate("/");
-        })
-        .catch(error => {
-            console.error(error.message);
-        });
+            .then(() => {
+                console.log("Log out successfully");
+                navigate("/");
+            })
+            .catch(error => {
+                console.error(error.message);
+            });
     };
 
     return (
@@ -83,7 +83,7 @@ const Header = () => {
                                         <span className="badge">New</span>
                                     </Link>
                                 </li>
-                                <li><a>Settings</a></li>
+                                <li><Link to={"/profile/update"}>Update Profile</Link></li>
                                 <li onClick={handleLogoutUser}><a>Logout</a></li>
                             </ul>
                         </div>
