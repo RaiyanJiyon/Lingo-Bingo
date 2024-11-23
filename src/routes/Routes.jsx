@@ -45,23 +45,24 @@ const router = createBrowserRouter([
             // Learning Routes
             {
                 path: 'start-learning',
-                element: <LetsLearn />
+                element: <LetsLearn />,
+                loader: () => fetch('/vocabularyData.json')
             },
             {
                 path: 'lesson/:lessonNo',
                 element: (
-                    
+                    <PrivateRoute>
                         <LessonDetails />
-                    
+                    </PrivateRoute>
                 )
             },
             // Tutorial Routes
             {
                 path: 'tutorials',
                 element: (
-                    
+                    <PrivateRoute>
                         <Tutorials />
-                
+                    </PrivateRoute>
                 )
             },
             // Profile Routes
@@ -74,15 +75,15 @@ const router = createBrowserRouter([
                             <PrivateRoute>
                                 <Profile />
                             </PrivateRoute>
-                            
+
                         )
                     },
                     {
                         path: 'update',
                         element: (
-                            
-                                <UpdateProfile />
-                            
+
+                            <UpdateProfile />
+
                         )
                     }
                 ]
