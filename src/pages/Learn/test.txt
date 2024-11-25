@@ -1,108 +1,12 @@
-import { Link, useLoaderData } from "react-router-dom";
+feat: add WhenToSayModal and integrate it into LessonDetails
 
-const LetsLearn = () => {
-    const allVocabulary = useLoaderData();
+- Created WhenToSayModal component to display detailed vocabulary information
+  - Includes fields for word, meaning, when to say, and example
+  - Utilized dialog element with responsive design and close functionality
 
-    const lessonNumbers = [...new Set(allVocabulary.map(vocabulary => vocabulary.lesson_no))];
+- Modified LessonDetails.jsx to integrate WhenToSayModal
+  - Added state management for modal visibility and data
+  - Implemented handleViewMoreButton to populate modal data dynamically
+  - Provided closeModal function to handle modal dismissal
 
-    return (
-        <div>
-            <div className="mt-8 space-y-2">
-                <h1 className="text-3xl font-bold text-center">Let’s Learn Together!</h1>
-                <p className="text-sm text-center">Dive into interactive lessons and comprehensive tutorials designed to enrich your
-                    vocabulary and make learning enjoyable!</p>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-10">
-                {
-                    lessonNumbers.map(lesson => (
-                        <Link to={`lesson/${lesson}`} key={lesson} className="group card bg-[#1e0e5c] text-neutral-content cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-110">
-                            <div className="card-body items-center text-center">
-                                <h2 className="card-title text-white">Lesson {lesson}</h2>
-                            </div>
-                        </Link>
-                    ))
-                }
-            </div>
-        </div>
-    );
-};
-
-export default LetsLearn;
-
-
-
-
-
-
-import { useEffect, useState } from "react";
-import { Link, useLoaderData, useParams } from "react-router-dom";
-import WhenToSayModal from "../../components/learn/WhenToSayModal";
-
-const LessonDetails = () => {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
-
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const [modalData, setModalData] = useState({});
-
-    const allVocabulary = useLoaderData();
-    const { lessonNo } = useParams();
-    const lessonId = parseInt(lessonNo);
-
-    const lesson = allVocabulary.filter(vocabulary => vocabulary.lesson_no === lessonId);
-    console.log(lesson);
-
-    const handleViewMoreButton = (word, meaning, whenToSay, example) => {
-        setModalData({ word, meaning, whenToSay, example });
-        setIsModalOpen(true);
-    };
-
-    const closeModal = () => {
-        setIsModalOpen(false);
-    };
-
-    return (
-        <div className="mt-8">
-            <h2 className="text-3xl font-bold text-center">Lesson {lessonId} Details</h2>
-            <div className="grid grid-cols-4 gap-6">
-                {lesson.map(vocabulary => (
-                    <div key={vocabulary.id} className="card bg-base-100 shadow-xl">
-                        <div className="card-body">
-                            <h2 className="card-title">{vocabulary.word}</h2>
-                            <p><span className="font-bold">Meaning:</span> {vocabulary.meaning}</p>
-                            <p><span className="font-bold">Pronunciation:</span> {vocabulary.pronunciation}</p>
-                            <p><span className="font-bold">Part of Speech:</span> {vocabulary.part_of_speech}</p>
-                            <div className="card-actions justify-end">
-                                <button 
-                                    className="btn w-full mt-4 bg-[#1e0e5c] text-white font-bold" 
-                                    onClick={() => handleViewMoreButton(vocabulary.word, vocabulary.meaning, vocabulary.when_to_say, vocabulary.example)}
-                                >
-                                    When to Say
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                ))}
-            </div>
-
-            <Link to={'/tutorials'} className="flex justify-center mt-10">
-                <button className="btn bg-[#1e0e5c] text-white font-bold">View More</button>
-            </Link>
-
-            {isModalOpen && (
-                <WhenToSayModal 
-                    isOpen={isModalOpen} 
-                    closeModal={closeModal}
-                    word={modalData.word}
-                    meaning={modalData.meaning}
-                    whenToSay={modalData.whenToSay}
-                    example={modalData.example}
-                />
-            )}
-        </div>
-    );
-};
-
-export default LessonDetails;
+- Enhanced user experience with an interactive 'When to Say' modal for vocabulary

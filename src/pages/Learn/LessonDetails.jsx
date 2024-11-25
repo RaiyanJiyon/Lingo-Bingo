@@ -29,9 +29,9 @@ const LessonDetails = () => {
     return (
         <div className="mt-8">
             <h2 className="text-3xl font-bold text-center">Lesson {lessonId} Details</h2>
-            <div className="grid grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8">
                 {lesson.map(vocabulary => (
-                    <div key={vocabulary.id} className="card bg-base-100 shadow-xl">
+                    <div key={vocabulary.id} className="card bg-base-100 shadow-xl transition-transform duration-300 ease-in-out transform hover:scale-110">
                         <div className="card-body">
                             <h2 className="card-title">{vocabulary.word}</h2>
                             <p><span className="font-bold">Meaning:</span> {vocabulary.meaning}</p>
@@ -50,8 +50,8 @@ const LessonDetails = () => {
                 ))}
             </div>
 
-            <Link to={'/tutorials'} className="flex justify-center mt-10">
-                <button className="btn bg-[#1e0e5c] text-white font-bold">View More</button>
+            <Link to={'/start-learning'} className="flex justify-center mt-10">
+                <button className="btn bg-[#1e0e5c] text-white font-bold">Back To Lesson</button>
             </Link>
 
             {isModalOpen && (
