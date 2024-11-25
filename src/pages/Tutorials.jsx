@@ -8,12 +8,12 @@ const Tutorials = () => {
 
     return (
         <div className="">
-            <div className="mt-8 space-y-2">
+            <div data-aos="zoom-in" className="mt-8 space-y-2">
                 <h1 className="text-3xl font-bold text-center">Master the Language: Comprehensive Tutorials</h1>
                 <p className="text-sm text-center">Dive into curated video lessons to boost your skills and understanding. Start your vocabulary journey today!</p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+            <div data-aos="fade-right" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
                 <div className="flex justify-center lg::justify-center">
                     <iframe width="300" height="200" className="rounded-lg" src="https://www.youtube.com/embed/qYsHLUAlH_8?si=NURmMqTH3ZcMKhxz" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                 </div>

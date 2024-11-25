@@ -12,7 +12,7 @@ const LetsLearn = () => {
 
     return (
         <div>
-            <div className="mt-8 space-y-2">
+            <div data-aos="zoom-in" className="mt-8 space-y-2">
                 <h1 className="text-3xl font-bold text-center">Let’s Learn Together!</h1>
                 <p className="text-sm text-center">Dive into interactive lessons and comprehensive tutorials designed to enrich your
                     vocabulary and make learning enjoyable!</p>
@@ -30,13 +30,13 @@ const LetsLearn = () => {
                 }
             </div>
 
-            <div className="mt-16 space-y-2">
+            <div data-aos="zoom-in" className="mt-16 space-y-2">
                 <h1 className="text-3xl font-bold text-center">Tutorials</h1>
                 <p className="text-sm text-center">Explore a variety of tutorials designed to expand your vocabulary and help
                     you master new words with ease!</p>
 
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+            <div data-aos="fade-right" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
                 <div className="flex justify-center lg::justify-center">
                     <iframe width="300" height="200" className="rounded-lg" src="https://www.youtube.com/embed/qYsHLUAlH_8?si=NURmMqTH3ZcMKhxz" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                 </div>
