@@ -1,4 +1,5 @@
 import Banner from "../components/home/Banner";
+import FAQ from "../components/home/FAQ";
 import SuccessSection from "../components/home/SuccessSection";
 
 const Home = () => {
@@ -9,6 +10,9 @@ const Home = () => {
             </div>
             <div>
                 <SuccessSection />
+            </div>
+            <div>
+                <FAQ />
             </div>
         </div>
     );
