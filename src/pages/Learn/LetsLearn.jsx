@@ -16,7 +16,7 @@ const LetsLearn = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-10">
                 {
                     lessonNumbers.map(lesson => (
-                        <Link to={`lesson/${lesson}`} key={lesson} className="card bg-[#1e0e5c] text-neutral-content cursor-pointer">
+                        <Link to={`lesson/${lesson}`} key={lesson} className="group card bg-[#1e0e5c] text-neutral-content cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-110">
                             <div className="card-body items-center text-center">
                                 <h2 className="card-title text-white">Lesson {lesson}</h2>
                             </div>
