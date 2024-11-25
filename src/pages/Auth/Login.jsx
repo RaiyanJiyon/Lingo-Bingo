@@ -17,7 +17,7 @@ const Login = () => {
         createUserWithGoogle()
             .then(result => {
                 console.log(result.user);
-                navigate("/");
+                navigate(location?.state ? location.state : "/");
             })
             .catch(error => {
                 console.error(error.message);
@@ -38,7 +38,7 @@ const Login = () => {
         loginUser(email, password)
             .then(userCredential => {
                 console.log(userCredential.user);
-                navigate("/");
+                navigate(location?.state ? location.state : '/');
             })
             .catch(error => {
                 console.error(error.message);
