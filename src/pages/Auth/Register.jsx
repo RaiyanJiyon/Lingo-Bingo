@@ -35,6 +35,13 @@ const Register = () => {
 
         console.log(name, photoURL, email, password, confirmPassword);
 
+        const validPassword = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+
+        if (!validPassword.test(password)) {
+            alert("Password should be at least 8 character");
+            return;
+        };
+
         createUser(email, password)
             .then(userCredential => {
                 console.log(userCredential.user);
