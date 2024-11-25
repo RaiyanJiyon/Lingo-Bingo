@@ -1,12 +1,17 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { authContext } from "../../contexts/AuthProvider";
+import { Helmet } from "react-helmet";
 
 const Profile = () => {
     const { user } = useContext(authContext);
 
     return (
         <div>
+            <Helmet>
+                <title>Profile | Lingo Bingo</title>
+            </Helmet>
+
             <div className='pb-24'>
                 {/* heading div */}
                 <div className='bg-[#1e0e5c] pb-48'>

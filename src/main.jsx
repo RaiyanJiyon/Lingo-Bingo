@@ -6,6 +6,7 @@ import router from './routes/Routes.jsx'
 import { AuthProvider } from './contexts/AuthProvider.jsx'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { HelmetProvider } from 'react-helmet-async';
 
 // Initialize AOS
 AOS.init({
@@ -16,8 +17,10 @@ AOS.init({
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <AuthProvider>
-      <RouterProvider router={router} />
-    </AuthProvider>
+    <HelmetProvider>
+      <AuthProvider>
+        <RouterProvider router={router} />
+      </AuthProvider>
+    </HelmetProvider>
   </StrictMode>,
 )

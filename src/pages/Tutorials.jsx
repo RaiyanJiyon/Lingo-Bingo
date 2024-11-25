@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 
 const Tutorials = () => {
@@ -7,7 +8,11 @@ const Tutorials = () => {
     }, []);
 
     return (
-        <div className="">
+        <div>
+            <Helmet>
+                <title>Tutorials | Lingo Bingo</title>
+            </Helmet>
+            
             <div data-aos="zoom-in" className="mt-8 space-y-2">
                 <h1 className="text-3xl font-bold text-center">Master the Language: Comprehensive Tutorials</h1>
                 <p className="text-sm text-center">Dive into curated video lessons to boost your skills and understanding. Start your vocabulary journey today!</p>

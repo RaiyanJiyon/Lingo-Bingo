@@ -2,6 +2,7 @@ import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { authContext } from "../../contexts/AuthProvider";
 import { FaGithub, FaGoogle } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 
 const Register = () => {
     useEffect(() => {
@@ -54,6 +55,10 @@ const Register = () => {
 
     return (
         <section className="bg-gray-50">
+            <Helmet>
+                <title>Register | Lingo Bingo</title>
+            </Helmet>
+
             <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto mt-6 lg:py-0">
                 <Link to={"/"} className="flex items-center mb-6 text-2xl font-semibold text-gray-900">
                     <img className="w-8 h-8 mr-2" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg" alt="logo" />

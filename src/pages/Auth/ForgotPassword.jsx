@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { authContext } from "../../contexts/AuthProvider";
+import { Helmet } from "react-helmet";
 
 const ForgotPassword = () => {
     useEffect(() => {
@@ -35,6 +36,10 @@ const ForgotPassword = () => {
 
     return (
         <section className="bg-gray-50">
+            <Helmet>
+                <title>Forget Password | Lingo Bingo</title>
+            </Helmet>
+            
             <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
                 <div className="w-full bg-white rounded-lg shadow border md:mt-0 sm:max-w-md xl:p-0">
                     <div className="p-6 space-y-4 md:space-y-6 sm:p-8">

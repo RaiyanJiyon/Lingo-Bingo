@@ -1,8 +1,13 @@
+import { Helmet } from "react-helmet";
 import AboutCard from "../components/About/AboutCard";
 
 const AboutUs = () => {
     return (
         <div>
+            <Helmet>
+                <title>About Us | Lingo Bingo</title>
+            </Helmet>
+
             <div data-aos="zoom-in" className="mt-8 space-y-2">
                 <h3 className="text-3xl text-center">Welcome to <span className="font-bold">Md. Raiyan-Ur-Rahman Jiyon</span>, where passion fuels innovation!</h3>
                 <p className="text-sm text-center">As a budding MERN stack developer, I specialize in building responsive, dynamic, and user-centric web applications. From creating seamless e-commerce experiences to developing creative solutions tailored to modern digital needs, I am dedicated to delivering clean, efficient, and impactful code. Let&apos;s bring your ideas to life with innovation and precision!</p>

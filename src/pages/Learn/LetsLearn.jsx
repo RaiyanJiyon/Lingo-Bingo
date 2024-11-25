@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 import { Link, useLoaderData } from "react-router-dom";
 
 const LetsLearn = () => {
@@ -12,6 +13,10 @@ const LetsLearn = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Lets Learn | Lingo Bingo</title>
+            </Helmet>
+            
             <div data-aos="zoom-in" className="mt-8 space-y-2">
                 <h1 className="text-3xl font-bold text-center">Let’s Learn Together!</h1>
                 <p className="text-sm text-center">Dive into interactive lessons and comprehensive tutorials designed to enrich your
