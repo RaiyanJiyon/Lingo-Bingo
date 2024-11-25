@@ -15,13 +15,13 @@ const Banner = () => {
                 autoplay={{ delay: 3000 }}
             >
                 <SwiperSlide className="-mt-6">
-                    <img className='w-full md:h-[400px] object-fill' src="https://i.ibb.co.com/WPt6fRm/slider-1.jpg" alt="Slider 1" />
+                    <img className='w-full md:h-[500px] object-fill' src="https://i.ibb.co.com/WPt6fRm/slider-1.jpg" alt="Slider 1" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full md:h-[400px] object-fill' src="https://i.ibb.co.com/W2wFHGm/slider-2.jpg" alt="Slider 2" />
+                    <img className='w-full md:h-[500px] object-fill' src="https://i.ibb.co.com/W2wFHGm/slider-2.jpg" alt="Slider 2" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-full md:h-[400px] object-fill' src="https://i.ibb.co.com/WGNtDcQ/slider-4.jpg" alt="Slider 3" />
+                    <img className='w-full md:h-[500px] object-fill' src="https://i.ibb.co.com/WGNtDcQ/slider-4.jpg" alt="Slider 3" />
                 </SwiperSlide>
             </Swiper>
         </div>
