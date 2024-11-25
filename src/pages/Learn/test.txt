@@ -1,0 +1,9 @@
+                    <li key={vocabulary.id} className="mt-4">
+                        <h3 className="text-xl font-semibold">{vocabulary.word}</h3>
+                        <p>Pronunciation: {vocabulary.pronunciation}</p>
+                        <p>Meaning: {vocabulary.meaning}</p>
+                        <p>Part of Speech: {vocabulary.part_of_speech}</p>
+                        <p>Difficulty: {vocabulary.difficulty}</p>
+                        <p>When to Say: {vocabulary.when_to_say}</p>
+                        <p>Example: {vocabulary.example}</p>
+                    </li>

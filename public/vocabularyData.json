@@ -988,5 +988,137 @@
         "lesson_no": 3,
         "when_to_say": "When talking about singing.",
         "example": "Wir singen ein Lied. (veer ZIN-gen ayn leet) - We sing a song."
+    },
+    {
+        "id": "91",
+        "word": "Lichtschalter",
+        "pronunciation": "LISHT-shahl-ter",
+        "meaning": "Light switch",
+        "part_of_speech": "noun",
+        "difficulty": "medium",
+        "lesson_no": 7,
+        "when_to_say": "When referring to a light switch.",
+        "example": "Der Lichtschalter ist an der Wand. - The light switch is on the wall."
+    },
+    {
+        "id": "92",
+        "word": "Spiegel",
+        "pronunciation": "SPEE-gel",
+        "meaning": "Mirror",
+        "part_of_speech": "noun",
+        "difficulty": "medium",
+        "lesson_no": 7,
+        "when_to_say": "When referring to a mirror.",
+        "example": "Der Spiegel hängt im Bad. - The mirror is in the bathroom."
+    },
+    {
+        "id": "93",
+        "word": "Teppich",
+        "pronunciation": "TEP-pich",
+        "meaning": "Carpet",
+        "part_of_speech": "noun",
+        "difficulty": "medium",
+        "lesson_no": 7,
+        "when_to_say": "When talking about a carpet.",
+        "example": "Der Teppich ist weich. - The carpet is soft."
+    },
+    {
+        "id": "94",
+        "word": "springen",
+        "pronunciation": "SHPRING-en",
+        "meaning": "To jump",
+        "part_of_speech": "verb",
+        "difficulty": "medium",
+        "lesson_no": 8,
+        "when_to_say": "When referring to jumping.",
+        "example": "Das Kind springt hoch. - The child jumps high."
+    },
+    {
+        "id": "95",
+        "word": "rennen",
+        "pronunciation": "REN-nen",
+        "meaning": "To run fast",
+        "part_of_speech": "verb",
+        "difficulty": "medium",
+        "lesson_no": 8,
+        "when_to_say": "When talking about running quickly.",
+        "example": "Der Hund rennt schnell. - The dog runs fast."
+    },
+    {
+        "id": "96",
+        "word": "klettern",
+        "pronunciation": "KLETT-ern",
+        "meaning": "To climb",
+        "part_of_speech": "verb",
+        "difficulty": "medium",
+        "lesson_no": 8,
+        "when_to_say": "When referring to climbing.",
+        "example": "Er klettert auf den Baum. - He climbs the tree."
+    },
+    {
+        "id": "97",
+        "word": "Gedicht",
+        "pronunciation": "geh-DEECHT",
+        "meaning": "Poem",
+        "part_of_speech": "noun",
+        "difficulty": "difficult",
+        "lesson_no": 9,
+        "when_to_say": "When referring to poetry or a poem.",
+        "example": "Das Gedicht ist schön geschrieben. - The poem is beautifully written."
+    },
+    {
+        "id": "98",
+        "word": "Roman",
+        "pronunciation": "ro-MAHN",
+        "meaning": "Novel",
+        "part_of_speech": "noun",
+        "difficulty": "medium",
+        "lesson_no": 9,
+        "when_to_say": "When referring to a long work of fiction.",
+        "example": "Der Roman ist spannend. - The novel is exciting."
+    },
+    {
+        "id": "99",
+        "word": "Buchstabe",
+        "pronunciation": "BOOCH-stah-beh",
+        "meaning": "Letter (of the alphabet)",
+        "part_of_speech": "noun",
+        "difficulty": "medium",
+        "lesson_no": 9,
+        "when_to_say": "When referring to letters or characters.",
+        "example": "Das Buch enthält viele Buchstaben. - The book contains many letters."
+    },
+    {
+        "id": "100",
+        "word": "lächeln",
+        "pronunciation": "LEH-cheln",
+        "meaning": "To smile",
+        "part_of_speech": "verb",
+        "difficulty": "easy",
+        "lesson_no": 10,
+        "when_to_say": "When referring to smiling.",
+        "example": "Sie lächelt freundlich. - She smiles kindly."
+    },
+    {
+        "id": "101",
+        "word": "weinen",
+        "pronunciation": "VY-nen",
+        "meaning": "To cry",
+        "part_of_speech": "verb",
+        "difficulty": "medium",
+        "lesson_no": 10,
+        "when_to_say": "When talking about crying.",
+        "example": "Das Baby weint. - The baby is crying."
+    },
+    {
+        "id": "102",
+        "word": "lachen",
+        "pronunciation": "LAH-chen",
+        "meaning": "To laugh",
+        "part_of_speech": "verb",
+        "difficulty": "easy",
+        "lesson_no": 10,
+        "when_to_say": "When referring to laughing.",
+        "example": "Die Kinder lachen. - The children laugh."
     }
 ]

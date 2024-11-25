@@ -45,16 +45,22 @@ const router = createBrowserRouter([
             // Learning Routes
             {
                 path: 'start-learning',
-                element: <LetsLearn />,
-                loader: () => fetch('/vocabularyData.json')
-            },
-            {
-                path: 'lesson/:lessonNo',
-                element: (
-                    <PrivateRoute>
-                        <LessonDetails />
-                    </PrivateRoute>
-                )
+                children: [
+                    {
+                        path: '',
+                        element: <LetsLearn />,
+                        loader: () => fetch('/vocabularyData.json')
+                    },
+                    {
+                        path: 'lesson/:lessonNo',
+                        element: (
+                            <PrivateRoute>
+                                <LessonDetails />
+                            </PrivateRoute>
+                        ),
+                        loader: () => fetch('/vocabularyData.json')
+                    },
+                ]
             },
             // Tutorial Routes
             {
@@ -75,15 +81,14 @@ const router = createBrowserRouter([
                             <PrivateRoute>
                                 <Profile />
                             </PrivateRoute>
-
                         )
                     },
                     {
                         path: 'update',
                         element: (
-
-                            <UpdateProfile />
-
+                            <PrivateRoute>
+                                <UpdateProfile />
+                            </PrivateRoute>
                         )
                     }
                 ]

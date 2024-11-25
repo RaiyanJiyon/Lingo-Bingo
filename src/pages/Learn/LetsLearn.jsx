@@ -4,7 +4,6 @@ const LetsLearn = () => {
     const allVocabulary = useLoaderData();
 
     const lessonNumbers = [...new Set(allVocabulary.map(vocabulary => vocabulary.lesson_no))];
-    console.log(lessonNumbers);
 
     return (
         <div>
