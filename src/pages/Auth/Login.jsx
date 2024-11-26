@@ -3,6 +3,8 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { authContext } from "../../contexts/AuthProvider";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { Helmet } from "react-helmet";
+import SuccessToaster from "../../components/ToasterNotification/SuccessToaster";
+import ErrorToaster from "../../components/ToasterNotification/ErrorToaster";
 
 const Login = () => {
     useEffect(() => {
@@ -18,32 +20,35 @@ const Login = () => {
         createUserWithGoogle()
             .then(result => {
                 console.log(result.user);
+                SuccessToaster("Successfully Logged In with Google");
                 navigate(location?.state ? location.state : "/");
             })
             .catch(error => {
                 console.error(error.message);
+                ErrorToaster(error.message);
             });
-    };
-
-    const handleLoginForm = (e) => {
-        e.preventDefault();
-
+        };
+        
+        const handleLoginForm = (e) => {
+            e.preventDefault();
+            
         const form = e.currentTarget;
         const formData = new FormData(form);
 
         const email = formData.get("email");
         const password = formData.get("password");
-
+        
         console.log(email, password);
-
+        
         loginUser(email, password)
-            .then(userCredential => {
-                console.log(userCredential.user);
-                navigate(location?.state ? location.state : '/');
-            })
-            .catch(error => {
-                console.error(error.message);
-                alert(error.message);
+        .then(userCredential => {
+            console.log(userCredential.user);
+            SuccessToaster("Successfully Logged In");
+            navigate(location?.state ? location.state : '/');
+        })
+        .catch(error => {
+            console.error(error.message);
+            ErrorToaster(error.message);
             });
     };
 

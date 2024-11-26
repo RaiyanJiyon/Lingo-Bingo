@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { authContext } from "../../contexts/AuthProvider";
+import SuccessToaster from "../ToasterNotification/SuccessToaster";
+import ErrorToaster from "../ToasterNotification/ErrorToaster";
 
 const Header = () => {
     const { user, logoutUser } = useContext(authContext);
@@ -11,10 +13,12 @@ const Header = () => {
         logoutUser()
             .then(() => {
                 console.log("Log out successfully");
+                SuccessToaster("Log out successfully");
                 navigate("/");
             })
             .catch(error => {
                 console.error(error.message);
+                ErrorToaster(error.message);
             });
     };
 

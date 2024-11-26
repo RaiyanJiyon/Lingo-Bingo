@@ -7,6 +7,8 @@ import { AuthProvider } from './contexts/AuthProvider.jsx'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { HelmetProvider } from 'react-helmet-async';
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 // Initialize AOS
 AOS.init({
@@ -20,6 +22,7 @@ createRoot(document.getElementById('root')).render(
     <HelmetProvider>
       <AuthProvider>
         <RouterProvider router={router} />
+        <ToastContainer />
       </AuthProvider>
     </HelmetProvider>
   </StrictMode>,

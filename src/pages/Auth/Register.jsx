@@ -1,13 +1,17 @@
 import { useContext, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { authContext } from "../../contexts/AuthProvider";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { Helmet } from "react-helmet";
+import SuccessToaster from "../../components/ToasterNotification/SuccessToaster";
+import ErrorToaster from "../../components/ToasterNotification/ErrorToaster";
 
 const Register = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+
+    const navigate = useNavigate();
 
     const { user, setUser, createUserWithGoogle, createUser } = useContext(authContext);
     console.log(user);
@@ -16,9 +20,12 @@ const Register = () => {
         createUserWithGoogle()
             .then(result => {
                 console.log(result.user);
+                SuccessToaster("Successfully Sign In with Google");
+                navigate("/");
             })
             .catch(error => {
                 console.error("Error during Google sign-up:", error.message);
+                ErrorToaster(error.message);
             });
     };
 
@@ -39,22 +46,29 @@ const Register = () => {
         const validPassword = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
 
         if (!validPassword.test(password)) {
-            alert("Password should be at least 8 character");
+            ErrorToaster("Password should be at least 8 character");
             return;
         };
+        
+        if (password !== confirmPassword) {
+            ErrorToaster("The password confirmation does not match.");
+            return;
+        }
 
         createUser(email, password)
             .then(userCredential => {
                 console.log(userCredential.user);
+                SuccessToaster("Successfully Signed In")
                 setUser({user, 
                     displayName: name,
                     photoURL: photoURL
                 })
-
+                navigate("/auth/login");
                 form.reset();
             })
             .catch(error => {
                 console.log(error.message);
+                ErrorToaster(error.message);
             });
     };
 

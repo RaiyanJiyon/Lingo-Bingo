@@ -2,6 +2,8 @@ import { useContext, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { authContext } from "../../contexts/AuthProvider";
 import { Helmet } from "react-helmet";
+import SuccessToaster from "../../components/ToasterNotification/SuccessToaster";
+import ErrorToaster from "../../components/ToasterNotification/ErrorToaster";
 
 const ForgotPassword = () => {
     useEffect(() => {
@@ -27,10 +29,12 @@ const ForgotPassword = () => {
         passwordReset(email)
             .then(() => {
                 console.log("Password Change successfully");
+                SuccessToaster("Password Change successfully");
                 window.open('https://mail.google.com', '_blank');
             })
             .catch(error => {
                 console.error(error.message);
+                ErrorToaster(error.message);
             });
     };
 

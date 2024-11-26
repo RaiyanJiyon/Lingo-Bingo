@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { authContext } from "../../contexts/AuthProvider";
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import SuccessToaster from "../../components/ToasterNotification/SuccessToaster";
+import ErrorToaster from "../../components/ToasterNotification/ErrorToaster";
 
 const UpdateProfile = () => {
     const { setUser, updateUserProfile } = useContext(authContext);
@@ -25,11 +27,13 @@ const UpdateProfile = () => {
                 })
                 form.reset();
                 console.log("Profile Update");
+                SuccessToaster("Profile updated successfully");
                 navigate("/profile")
             })
             .catch(error => {
                 console.error(error.message);
                 alert(error.message);
+                ErrorToaster(error.message);
             });
     };
 
