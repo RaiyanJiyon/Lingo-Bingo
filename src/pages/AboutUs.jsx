@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet";
 import AboutCard from "../components/About/AboutCard";
+import WebsiteCard from "../components/About/WebsiteCard";
 
 const AboutUs = () => {
     return (
@@ -26,10 +27,10 @@ const AboutUs = () => {
             <div className="mt-20 space-y-10">
                 <h1 data-aos="fade-right" className="text-3xl font-bold text-center">Projects</h1>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 pt-8">
-                    <AboutCard image={""} title={"Gadget Heaven"} description={"GadgetHaven is a gadget store with a cart, wishlist, filtering, sorting, and smooth local storage-based functionality."} />
-                    <AboutCard image={""} title={"Peddy Pet Adoption"} description={"Peddy Pet Adoption is a responsive app for browsing, adopting pets, and saving favorites."} />
-                    <AboutCard image={""} title={"Donate Bangladesh"} description={"Donate Bangladesh is a donating platform where people donate for flood affected people in the Bangladesh."} />
-                    <AboutCard image={""} title={"Rinterio Design"} description={"Rinterio Design is a constructive platform where people can hire their constructor for building their house."} />
+                    <WebsiteCard title={"Gadget Heaven"} description={"GadgetHaven is a gadget store with a cart, wishlist, filtering, sorting, and smooth local storage-based functionality."} webLink={"https://gadget-heaven2.netlify.app/"} gitLink={"https://github.com/RaiyanJiyon/Gadget-Heaven"} />
+                    <WebsiteCard title={"BPL Dream 11"} description={"BPL-DREAM 11 is a dynamic and interactive React-based web application that allows users to build their own cricket team."} webLink={"https://bpl-dream-elev.netlify.app/"} gitLink={"https://github.com/RaiyanJiyon/BPL-Dream-11"} />
+                    <WebsiteCard title={"Peddy Pet Adoption"} description={"Peddy Pet Adoption is a responsive app for browsing, adopting pets, and saving favorites."} webLink={"https://peddy-pet-adoption-ecommerce.netlify.app/"} gitLink={"https://github.com/RaiyanJiyon/Peddy-API-Website"} />
+                    <WebsiteCard title={"Donate Bangladesh"} description={"Donate Bangladesh is a donating platform where people donate for flood affected people in the Bangladesh."} webLink={"https://raiyanjiyon.github.io/Donate-Bangladesh-Website/"} gitLink={"https://github.com/RaiyanJiyon/Donate-Bangladesh-Website"} />
                 </div>
             </div>
         </div>
