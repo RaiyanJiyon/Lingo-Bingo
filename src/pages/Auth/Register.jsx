@@ -9,7 +9,7 @@ const Register = () => {
         window.scrollTo(0, 0);
     }, []);
 
-    const { user, createUserWithGoogle, createUser } = useContext(authContext);
+    const { user, setUser, createUserWithGoogle, createUser } = useContext(authContext);
     console.log(user);
 
     const handleGoogleSignUP = () => {
@@ -46,6 +46,11 @@ const Register = () => {
         createUser(email, password)
             .then(userCredential => {
                 console.log(userCredential.user);
+                setUser({user, 
+                    displayName: name,
+                    photoURL: photoURL
+                })
+
                 form.reset();
             })
             .catch(error => {
