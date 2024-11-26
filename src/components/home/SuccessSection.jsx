@@ -16,7 +16,7 @@ const SuccessSection = () => {
                 {/* Users Count */}
                 <div data-aos="zoom-in" className="flex flex-col items-center space-y-2 md:space-y-4">
                     <span className="text-xl">Users</span>
-                    <span className="font-mono text-5xl">
+                    <span className="font-mono text-3xl md:text-4xl">
                         <CountUp
                             end={24600}
                             duration={10}
@@ -32,7 +32,7 @@ const SuccessSection = () => {
                 {/* Lesson Count */}
                 <div data-aos="zoom-in" className="flex flex-col items-center space-y-2 md:space-y-4">
                     <span className="text-xl">Lesson Count</span>
-                    <span className="font-mono text-5xl">
+                    <span className="font-mono text-3xl md:text-4xl">
                         <CountUp
                             end={810}
                             duration={10}
@@ -48,7 +48,7 @@ const SuccessSection = () => {
                 {/* Vocabulary Count */}
                 <div data-aos="zoom-in" className="flex flex-col items-center space-y-2 md:space-y-4">
                     <span className="text-xl">Vocabulary Count</span>
-                    <span className="font-mono text-5xl">
+                    <span className="font-mono text-3xl md:text-4xl">
                         <CountUp
                             end={33600}
                             duration={10}
@@ -64,7 +64,7 @@ const SuccessSection = () => {
                 {/* Tutorials Count */}
                 <div data-aos="zoom-in" className="flex flex-col items-center space-y-2 md:space-y-4">
                     <span className="text-xl">Tutorial</span>
-                    <span className="font-mono text-5xl">
+                    <span className="font-mono text-3xl md:text-4xl">
                         <CountUp
                             end={1600}
                             duration={10}

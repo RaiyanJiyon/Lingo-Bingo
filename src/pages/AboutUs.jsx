@@ -14,9 +14,9 @@ const AboutUs = () => {
                 <p className="text-sm text-center">As a budding MERN stack developer, I specialize in building responsive, dynamic, and user-centric web applications. From creating seamless e-commerce experiences to developing creative solutions tailored to modern digital needs, I am dedicated to delivering clean, efficient, and impactful code. Let&apos;s bring your ideas to life with innovation and precision!</p>
             </div>
 
-            <div className="mt-20 space-y-10">
+            <div className="mt-20 space-y-10 ">
                 <h1 data-aos="fade-right" className="text-3xl font-bold text-center">Skills</h1>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 pt-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 pt-8">
                     <AboutCard image={"https://www.revenueriver.co/hubfs/fullstack.jpeg"} title={"Full-Stack Development"} description={"Proficient in building dynamic web applications with React, Node.js, Express, and MongoDB."} />
                     <AboutCard image={"https://www.webfx.com/wp-content/uploads/2021/10/iStock-612224522.jpg"} title={"Responsive Design"} description={"Crafting mobile-first, user-friendly interfaces using Tailwind CSS and DaisyUI."} />
                     <AboutCard image={"https://www.accuwebtech.com/images/js-expertise.png"} title={"JavaScript Expertise"} description={"Skilled in solving problems and building interactive applications with modern JavaScript techniques."} />
@@ -24,9 +24,9 @@ const AboutUs = () => {
                 </div>
             </div>
 
-            <div className="mt-20 space-y-10">
+            <div className="mt-20 space-y-10 ">
                 <h1 data-aos="fade-right" className="text-3xl font-bold text-center">Projects</h1>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 pt-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 pt-8">
                     <WebsiteCard title={"Gadget Heaven"} description={"GadgetHaven is a gadget store with a cart, wishlist, filtering, sorting, and smooth local storage-based functionality."} webLink={"https://gadget-heaven2.netlify.app/"} gitLink={"https://github.com/RaiyanJiyon/Gadget-Heaven"} />
                     <WebsiteCard title={"BPL Dream 11"} description={"BPL-DREAM 11 is a dynamic and interactive React-based web application that allows users to build their own cricket team."} webLink={"https://bpl-dream-elev.netlify.app/"} gitLink={"https://github.com/RaiyanJiyon/BPL-Dream-11"} />
                     <WebsiteCard title={"Peddy Pet Adoption"} description={"Peddy Pet Adoption is a responsive app for browsing, adopting pets, and saving favorites."} webLink={"https://peddy-pet-adoption-ecommerce.netlify.app/"} gitLink={"https://github.com/RaiyanJiyon/Peddy-API-Website"} />
