@@ -19,7 +19,7 @@ const SuccessSection = () => {
                     <span className="font-mono text-5xl">
                         <CountUp
                             end={24600}
-                            duration={2.75}
+                            duration={10}
                             separator=","
                             delay={0}
                         >
@@ -35,7 +35,7 @@ const SuccessSection = () => {
                     <span className="font-mono text-5xl">
                         <CountUp
                             end={810}
-                            duration={2.75}
+                            duration={10}
                             separator=","
                             delay={0}
                         >
@@ -51,7 +51,7 @@ const SuccessSection = () => {
                     <span className="font-mono text-5xl">
                         <CountUp
                             end={33600}
-                            duration={2.75}
+                            duration={10}
                             separator=","
                             delay={0}
                         >
@@ -67,7 +67,7 @@ const SuccessSection = () => {
                     <span className="font-mono text-5xl">
                         <CountUp
                             end={1600}
-                            duration={2.75}
+                            duration={10}
                             separator=","
                             delay={0}
                         >
