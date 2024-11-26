@@ -13,7 +13,7 @@ const Home = () => {
             <div className="mt-6">
                 <Banner />
             </div>
-            <div>
+            <div className="mt-6">
                 <SuccessSection />
             </div>
             <div>

@@ -6,7 +6,7 @@ import 'swiper/css/scrollbar';
 
 const Banner = () => {
     return (
-        <div className="min-h-screen">
+        <div className="">
             <Swiper
                 modules={[Navigation, A11y, Autoplay]}
                 spaceBetween={50}
